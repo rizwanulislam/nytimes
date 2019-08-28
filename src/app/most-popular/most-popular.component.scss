@@ -4,24 +4,15 @@
     height: auto !important; /* needs to be important because md-card also sets it that way */
   }
   
-  .headerRow{
-    margin-right: 15px;
-  }
-  .headerRow:focus {
-    outline: none;
-  }
-  
-  .title{
-      font-weight: bold;
+  a {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
   }
   
   .card-header{
     margin-bottom: 5px;
     height: 100px;
-  }
-  
-  .active-link{
-    color: #FF4432;
   }
   
   .authorName{
@@ -52,14 +43,4 @@
   .mat-card-header-text {
     margin: 0px !important; 
   }
-
-  .link-button button {
-    margin-right: 8px;
-  }
-  
-  /* select:focus {
-  outline: none;
-  } */
-
-  
   

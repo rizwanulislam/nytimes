@@ -1,0 +1,44 @@
+<!-- <div align="center">
+  <form autocomplete="off" (ngSubmit)="specificNewsSearch()">
+    <input name="search" class="searchForm" type="text" [(ngModel)]="searchOption" placeholder="Search for an article">
+  </form>
+</div> -->
+<!-- <div class="" *ngIf="searchOption">
+  <mat-card *ngFor="let article of articles" class="mat-card">
+    <a href="{{article.web_url}}" target="_blank"></a>
+    <mat-card-header class="card-header">
+      <mat-card-title class="title">{{article.headline.main}}</mat-card-title>
+    </mat-card-header>
+    <div [hidden]="!article.imageSource">
+      <img mat-card-image class="img-article" src={{article.imageSource}}>
+    </div>
+    <mat-card-content>
+      <p>
+        {{article.abstract}}
+      </p>
+      <mat-card-subtitle class="authorName">{{article.byline.original | titlecase }} - {{article.published_date | date:'MMMM d, y'}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+<div class="">
+  <div style="text-align:center;">
+    <button mat-button color="primary" (click)="select(choice.key)" [style.color]="choice.value" *ngFor="let choice of selectCriteria | keyvalue">{{choice.key | titlecase}}</button>
+  </div>
+  <div style="float:left;">
+    <mat-card *ngFor="let article of articles" class="mat-card">
+      <a href="{{article.url}}" target="_blank"></a>
+      <div [hidden]="!article.imageSource">
+        <img mat-card-image class="img-article" src={{article.imageSource}}>
+      </div>
+      <mat-card-content>
+        <mat-card-header class="card-header">
+          <mat-card-title class="title">{{article.title}}</mat-card-title>
+        </mat-card-header>
+        <p>
+          {{article.abstract}}
+        </p>
+        <mat-card-subtitle class="authorName">{{article.byline | titlecase }} - {{article.published_date | date:'MMMM d, y'}}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

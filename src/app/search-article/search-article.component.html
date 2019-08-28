@@ -1,0 +1,29 @@
+<div align="center">
+    <form autocomplete="off" (ngSubmit)="searchArticle()">
+        <mat-form-field>
+            <input name="search" matInput [(ngModel)]="searchOption" placeholder="Search for an article">
+          </mat-form-field>
+      <!-- <form autocomplete="off" (ngSubmit)="searchArticle()">
+        <input name="search" class="searchForm" type="text" [(ngModel)]="searchOption" placeholder="Search for an article">
+      </form> -->
+    </form>
+</div>
+
+<div class="">
+  <mat-card *ngFor="let article of articles" class="mat-card">
+    <!-- <a href="{{article.web_url}}" target="_blank"></a> -->
+    <a [routerLink]="['/result', article._id]"></a>
+    <mat-card-header class="card-header">
+      <mat-card-title class="title">{{article.headline.main}}</mat-card-title>
+    </mat-card-header>
+    <div [hidden]="!article.imageSource">
+      <img mat-card-image class="img-article" src={{article.imageSource}}>
+    </div>
+    <mat-card-content>
+      <p>
+        {{article.abstract}}
+      </p>
+      <mat-card-subtitle class="authorName">{{article.byline.original | titlecase }} - {{article.published_date | date:'MMMM d, y'}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>

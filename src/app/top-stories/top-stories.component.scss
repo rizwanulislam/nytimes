@@ -1,0 +1,45 @@
+.md-unstyled-image img{
+  max-width: 100%;
+  width: auto;
+  height: auto !important; /* needs to be important because md-card also sets it that way */
+}
+
+a {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+}
+
+.card-header{
+  margin-bottom: 5px;
+  height: 100px;
+}
+
+.authorName{
+  font-size: 12px;
+}
+
+.img-article{
+    height: 203px;
+    /* width: 445px; */
+    /* margin:2px; */
+    /* float: left; */
+    /* padding-left: 20%; */
+    /* margin: auto; */
+    /* width: 100%; */
+}
+
+.mat-card{
+  /* margin-left: 25px; */
+  display: inline-block;
+  height: 416px;
+  width: 19%;
+  margin: 22px;
+  vertical-align: top;
+  cursor: pointer;
+  /* margin-bottom: 10px; */
+}
+
+.mat-card-header-text {
+  margin: 0px !important; 
+}
